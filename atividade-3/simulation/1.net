@@ -1,0 +1,19 @@
+* C:\users\alejopm\Favorites\alejopm\eng\ELT\eletronica-3\atividade-3\simulation\1.asc
+XU1 0 N001 Vcc Vdd Vout TL082
+XU2 N002 Vdc Vcc Vdd Vcomp TL082
+R1 N002 Vout 1k
+C1 Vout N001 2.7n
+Q1 Vout Vcomp N001 0 BC548B
+C2 Vcomp N002 1n
+R2 N001 Vco 100k
+V1 Vcc 0 12
+V2 0 Vdd 12
+V3 Vco 0 -3
+V4 Vdc 0 7
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\alejopm\My Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 0 2m 0.1m startup
+.lib ..\sym\EXTRA\ExtraComparators\Tl082.lib
+.backanno
+.end
